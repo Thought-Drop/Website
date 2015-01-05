@@ -18,6 +18,49 @@ html, body {
   position: relative;
   font-family: 'Lato', helvetica, sans-serif;
   background-color: #4f85ff;
+  font-weight: 300;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 2.8em;
+  line-height: 1.5;
+}
+h2 {
+  font-weight: 300;
+  font-size: 2.4em;
+  color: rgba(250, 250, 250, 0.8);
+
+  span {
+    display: block;
+    font-size: 0.5em;
+    font-weight: 400;
+    color: rgba(250, 250, 250, 0.5);
+    text-align: center;
+  }
+}
+h3 {
+  color: #FD6E6E;
+  font-weight: 300;
+  font-size: 2em;
+}
+p {
+  line-height: 1.4;
+}
+
+.button {
+  color: #fff;
+  background: #FD6E6E;
+  width: 40%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 5px;
+
+  &:hover {
+    background: darken(#FD6E6E, 5);
+    cursor: pointer;
+  }
 }
 
 .container {
@@ -29,10 +72,10 @@ html, body {
 header {
  width: 100%;
  height: 100px;
- border: 1px solid #fff;
+ // border: 1px solid #fff;
 
   .logo {
-    background: url(../../../images/build/thought_drop_logo.png) center no-repeat;
+    background: url(../../../images/build/thought_drop_logo.png) center 100% no-repeat;
     background-size: 80%;
     height: 70px;
     width: 300px;
@@ -41,20 +84,95 @@ header {
   }
 
   nav {
+    width: 100%;
+    margin: 15px auto 0;
+
     ul {
       margin: 0;
 
       li {
         display: inline-block;
         float: left;
-        // margin: 0 20px 0 10px;
         width: 33%;
+        // text-align: center;
 
         a {
           color: #fff;
           text-decoration: none;
+
+          &:hover {
+            font-weight: bold;
+          }
         }
       }
     }
   }
+}
+
+section {
+  padding: 25px 0;
+
+  &.white {
+    background: #fff;
+  }
+  &.green {
+    background: #28D8B3;
+  }
+  &.gray {
+    background: #535A6C;
+  }
+  &.red {
+    background: #FD6E6E;
+  }
+}
+
+#hero {
+  color: #fff;
+
+  .col-left {
+
+  }
+  .col-right {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+}
+
+#feature {
+  div {
+    margin: 0 0 50px 0;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+#testimonials {
+  text-align: center;
+  color: #fff;
+
+  blockquote {
+    text-align: left;
+
+    p {
+      font-size: 1.6em;
+    }
+    cite {
+      color: rgba(250, 250, 250, 0.9);
+
+      span {
+        display: block;
+        color: rgba(250, 250, 250, 0.7);
+      }
+    }
+  }
+}
+
+#promo {
+  text-align: center;
 }
