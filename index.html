@@ -13,26 +13,26 @@
 <body>
 
   <script src="js/build/production.min.js"></script>
-  <header>
+  <header class="cf">
     <div class="container">
       <h1 class="logo">Thought Drop</h1>
       <nav>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#press">Press</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#promo">Download</a></li>
           </ul>
       </nav>
     </div>
   </header>
   <section>
-    <div class="container">
+    <div class="container cf">
       <div id="hero">
         <div class="col-left">
-        <img src="images/build/thoughts.png" height="600" width="600" alt="">
+          <img src="images/build/thoughts.png" height="600" width="600" alt="">
         </div>
         <div class="col-right">
-          <h1>Beautiful, simple and easy to use task manager.</h1>
+          <h1><strong>Stop forgetting</strong> your ideas. <strong>Start executing</strong> them.</h1>
           <form action="https://tinyletter.com/creativeember" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/creativeember', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
             <p><label for="tlemail">Sign up to be notified when Thought Drop is ready for download.</label></p>
             <p>
@@ -48,34 +48,50 @@
   <section class="white">
     <div class="container">
       <div id="feature">
-        <div>
-          <img src="images/build/main.png" height="" width="" alt="">
-          <h3>Focus on priority</h3> <!-- QUICKLY ADD IDEAS -->
-          <p>It's a scientific fact that a human can only focus on one thing at a time. That's why we added the main priority feature, which stands out only one priority task.</p>
+        <div class="cf">
+          <div class="col-right">
+            <img src="images/build/main.png" height="" width="" alt="">
+          </div>
+          <div class="col-left">
+            <h3>Focus on speed</h3>
+            <p>Humans forget thoughts very quickly. This is why we've built Thought Drop to enable you to save ideas before they disappear.</p>
+          </div>
         </div>
-        <div>
-          <img src="images/build/details.png" height="" width="" alt="">
-          <h3>No mess</h3> <!-- FAST SEARCH -->
-          <p>It's good to have everything sorted. Taasky offers categories which can filter your tasks in a very simple manner. Every category has its own colour to avoid chaos.</p>
+        <div class="cf">
+          <div class="col-left">
+            <img src="images/build/details.png" height="" width="" alt="">
+          </div>
+          <div class="col-right">
+            <h3>Insightful metadata</h3> <!-- FAST SEARCH -->
+            <p>Ideas by themselves can be a little vague. Thought Drop allows you to add useful metadata to every thought to better remember and act on your ideas in the future.</p>
+          </div>
         </div>
-        <div>
-          <img src="images/build/badges.png" height="" width="" alt="">
-          <h3>Award-winning design</h3> <!-- REWARDS TO KEEP YOU MOTIVATED -->
-          <p>Award-winning minimalistic design with maximum emphasis on simplicity and fast control. With Taasky, you will be glad to see your everyday tasks.</p>
+        <div class="cf">
+          <div class="col-right">
+            <img src="images/build/badges.png" height="" width="" alt="">
+          </div>
+          <div class="col-left">
+            <h3>Rewards &amp; Analytics</h3>
+            <p>Beautiful badges and powerful analytics keep you engaged and encourage you to stay creative.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="green">
+  <section class="orange">
     <div class="container">
       <div id="testimonials">
         <h2>
-          <span>First impression</span>
-          What people say
+          <span>First impressions</span>
+          What they're saying
         </h2>
-        <blockquote cite="http://example.com/facts">
-          <p>"I really love Thought Drop. It's a brilliant idea journal."</p>
-          <cite>Tomas Baran <span>CEO &amp; Founder of Goldee</cite>
+        <blockquote id="quote1" cite="http://example.com/facts">
+          <p>"Awesome, I love this; it's exactly what I need."</p>
+          <cite>Logan Leger <span>CEO &amp; Founder of NewAperio</cite>
+        </blockquote>
+        <blockquote id="quote2" cite="http://example.com/facts">
+          <p>"Awesome, I love this; it's exactly what I need."</p>
+          <cite>Richard Felix <span>CEO &amp; Founder of Shiftedfrequency</cite>
         </blockquote>
       </div>
     </div>
@@ -84,23 +100,28 @@
     <div class="container">
       <div id="promo">
         <h2>
-          <span>Finally in Appstore for you</span>
-          Thoughts have never been so fun.
+          <span>In the App Store very soon</span>
+          Saving your best ideas has never been so easy!
         </h2>
 
         <div class="button">Coming Soon!</div>
       </div>
     </div>
   </section>
-  <section class="red">
+  <!-- <section class="red">
     <div class="container">
       <div id="press">
 
       </div>
     </div>
-  </section>
-  <footer class="red">
-
+  </section> -->
+  <footer class="red cf">
+    <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Email</a></li>
+    </ul>
+    <p class="love">Made with &#9829; by <a href="http://creativeember.com">Creative Ember</a></p>
   </footer>
 </body>
 

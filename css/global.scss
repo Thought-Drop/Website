@@ -17,8 +17,10 @@ html, body {
   margin: 0px;
   position: relative;
   font-family: 'Lato', helvetica, sans-serif;
-  background-color: #4f85ff;
+  background-color: #4878A8;
+  background-image: linear-gradient(#4878A8, #285ad5);
   font-weight: 300;
+  overflow: scroll;
 }
 
 h1 {
@@ -41,11 +43,12 @@ h2 {
   }
 }
 h3 {
-  color: #FD6E6E;
+  color: #285ad5;
   font-weight: 300;
   font-size: 2em;
 }
 p {
+  font-size: 1.1em;
   line-height: 1.4;
 }
 
@@ -63,21 +66,69 @@ p {
   }
 }
 
+form input[type=text] {
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 0 0 10px;
+  text-align: center;
+  font-size: 1.1em;
+  border: 1px solid #FFF;
+}
+form input[type=submit] {
+  background: #5EA4FF;
+  color: #FFF;
+  border: none;
+  padding: 10px;
+  width: 50%;
+  height: 50px;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+form input[type=submit]:hover {
+  background: #2B87FF;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
-  border: 1px solid #fff;
+  // border: 1px solid #fff;
+  max-width: 1000px;
+}
+
+// UTILITY CLASSES
+.white {
+  background: #fff;
+}
+.orange {
+  background: #F07830;
+}
+.gray {
+  background: #487890;
+}
+.red {
+  background: #FD6E6E;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
 }
 
 header {
  width: 100%;
- height: 100px;
- // border: 1px solid #fff;
+ height: auto;
+ padding: 20px 0 0;
+ margin-bottom: 40px;
 
   .logo {
-    background: url(../../../images/build/thought_drop_logo.png) center 100% no-repeat;
-    background-size: 80%;
-    height: 70px;
+    background: url(../../../images/build/thought_drop_logo.png) center no-repeat;
+    background-size: contain;
+    height: 75px;
     width: 300px;
     margin: 0 auto;
     text-indent: -999em;
@@ -89,11 +140,13 @@ header {
 
     ul {
       margin: 0;
+      padding: 0;
 
       li {
         display: inline-block;
         float: left;
-        width: 33%;
+        width: auto;
+        margin-right: 15%;
         // text-align: center;
 
         a {
@@ -101,9 +154,12 @@ header {
           text-decoration: none;
 
           &:hover {
-            font-weight: bold;
+            text-decoration: underline;
           }
         }
+      }
+      li:last-child {
+        margin-right: 0;
       }
     }
   }
@@ -111,19 +167,6 @@ header {
 
 section {
   padding: 25px 0;
-
-  &.white {
-    background: #fff;
-  }
-  &.green {
-    background: #28D8B3;
-  }
-  &.gray {
-    background: #535A6C;
-  }
-  &.red {
-    background: #FD6E6E;
-  }
 }
 
 #hero {
@@ -136,7 +179,7 @@ section {
     text-align: center;
   }
   img {
-    max-width: 100%;
+    max-width: 300px;
     max-height: 100%;
   }
 
@@ -148,7 +191,7 @@ section {
     text-align: center;
   }
   img {
-    max-width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -158,6 +201,7 @@ section {
 
   blockquote {
     text-align: left;
+    display: none;
 
     p {
       font-size: 1.6em;
@@ -171,8 +215,147 @@ section {
       }
     }
   }
+  // #quote1 {
+  //   display: block;
+  // }
+}
+
+footer {
+  padding: 10px;
+  ul {
+    margin: 0 auto;
+    max-width: 900px;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      float: left;
+      width: auto;
+      margin-right: 22%;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+    li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  .love {
+    color: rgba(250, 250, 250, 0.7);
+    margin-top: 40px;
+    text-align: center;
+
+    a {
+      color: #f5a623;
+      text-decoration: none;
+      font-weight: bold;
+      background: #fff;
+      padding: 5px;
+      border-radius: 10px;
+      margin: 0 5px;
+      transition: all ease-in 0.1s;
+
+      &:hover {
+        color: #fff;
+        background: #f5a623;
+      }
+    }
+  }
 }
 
 #promo {
   text-align: center;
+}
+
+// Medium sized screens
+@media screen and (min-width: 700px) {
+  .container {
+    width: 90%;
+  }
+  .col-left {
+    float: left;
+    width: 40%;
+  }
+  .col-right {
+    float: right;
+    width: 60%;
+    padding: 0 0 0 60px;
+  }
+
+  header {
+    .logo {
+      margin: 0;
+      background-position: 0 0;
+      width: 50%;
+      float: left;
+    }
+
+    nav {
+      width: 45%;
+      margin: 35px 0 0 5%;
+      float: left;
+
+      ul {
+        li {
+          font-size: 1.1em;
+          width: auto;
+          margin-right: 7%;
+        }
+      }
+    }
+  }
+
+  #hero {
+    .col-right {
+      padding: 0 0 0 60px;
+    }
+    img {
+      max-width: 300px;
+      max-height: 100%;
+    }
+
+  }
+
+  #testimonials {
+    text-align: center;
+    color: #fff;
+
+    blockquote {
+      text-align: center;
+
+      p {
+        font-size: 1.6em;
+      }
+      cite {
+        color: rgba(250, 250, 250, 0.9);
+
+        span {
+          display: block;
+          color: rgba(250, 250, 250, 0.7);
+        }
+      }
+    }
+  }
+
+  footer ul li { margin-right: 35%; }
+
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    nav {
+      ul {
+        li {
+          margin-right: 16%;
+        }
+      }
+    }
+  }
+
+  #hero {
+    .col-right {
+      text-align: left;
+    }
+  }
 }
